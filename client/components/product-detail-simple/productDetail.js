@@ -16,7 +16,7 @@ class ProductDetail extends getRawComponent("ProductDetail") {
             />
           </div>
         </div>
-        <div className="pdp-filler"><img alt="Woman in front of skyscrapers" src="/plugins/reaction-swag-shop/woman-skyline.jpg" /></div>
+        <div className="pdp-filler"><img alt="Woman in front of skyscrapers" src="/plugins/abhisheks-shop/woman-skyline.jpg" /></div>
         <Components.SimilarProducts {...this.props} />
       </div>
     );

@@ -8,7 +8,7 @@ const UtilityBar = (props, context) => {
     tags: false,
     search: false,
     notifications: false,
-    languages: true,
+    languages: false,
     currency: false,
     mainDropdown: true,
     cartContainer: false
@@ -19,9 +19,8 @@ const UtilityBar = (props, context) => {
   };
   return (
     <div className={"utility-bar"}>
-      <div className={"utility-bar-hashtag"}>{"#madeinthesunshine"}</div>
-      <div className={"utility-bar-news"}>
-        <a href="/news">{"Reaction News: v1.1 releases"}&nbsp;&mdash;&nbsp;{"See what's new"}</a></div>
+      <div className={"utility-bar-social"}>{"#Follow us on"}&nbsp; &nbsp; <a href="http://www.facebook.com/thegtagamer"><i className={"fa fa-facebook"}></i></a>&nbsp; <a href="http://www.twitter.com/thegtagamer"><i className={"fa fa-twitter"}></i></a>&nbsp; <a href="http://www.instagram.com/thegtagamer"><i className={"fa fa-instagram"}></i></a> &nbsp; <a href="http://www.youtube.com/thegtagamer"><i className={"fa fa-youtube"}></i></a></div>
+    
       <div className={"utility-bar__main"}>
         {React.createElement(Components.NavBar, newProps, context)}
       </div>

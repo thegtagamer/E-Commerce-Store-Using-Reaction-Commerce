@@ -1,4 +1,4 @@
 import { registerComponent, getHOCs } from "@reactioncommerce/reaction-components";
-import SwagShopFooter from "../components/footer";
+import AbhiShopFooter from "../components/footer";
 
-registerComponent("SwagShopFooter", SwagShopFooter, getHOCs("NavBar"));
+registerComponent("AbhiShopFooter", SwagShopFooter, getHOCs("NavBar"));

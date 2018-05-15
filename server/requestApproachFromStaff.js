@@ -4,7 +4,7 @@ import { Logger } from "/server/api";
 
 
 const methods = {
-  "reaction-swag-shop/requestApproachFromStaff": (email) => {
+  "abhishek-shop/requestApproachFromStaff": (email) => {
     check(email, String);
 
     Logger.info(`Contact person at ${email}`);

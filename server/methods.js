@@ -172,7 +172,7 @@ methods.importProductImages = function () {
       const productId = product._id;
       if (!MediaRecords.findOne({ "metadata.productId": productId })) {
         const { shopId } = product;
-        const filepath = `plugins/reaction-swag-shop/images/${productId}.jpg`;
+        const filepath = `plugins/abhisheks-shop/images/${productId}.jpg`;
         const uint8array = Assets.getBinary(filepath);
         const topVariant = getTopVariant(productId);
 

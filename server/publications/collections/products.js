@@ -1,13 +1,11 @@
 import _ from "lodash";
 import { Meteor } from "meteor/meteor";
 import { check, Match } from "meteor/check";
+import Schemas from "@reactioncommerce/schemas";
 import { Shops, Tags, Catalog } from "/lib/collections";
 import { Logger } from "/server/api";
-import { getSchemas } from "@reactioncommerce/reaction-collections";
-
 
 // Validate the subscription filter against our extended filter schema.
-const Schemas = getSchemas();
 const { filters } = Schemas;
 
 function filterProducts(productFilters) {
@@ -173,7 +171,7 @@ function filterProducts(productFilters) {
         }
       });
     }
-    // BOF: swag shop featuredProduct filter
+    // BOF: Abhi shop featuredProduct filter
     if (Object.prototype.hasOwnProperty.call(productFilters, "featuredProductLabel")) {
       if (productFilters.featuredProductLabel !== "") {
         _.extend(selector, {
@@ -201,7 +199,7 @@ function filterProducts(productFilters) {
         }
       }
     }
-    // EOF: swag shop featuredProduct filter
+    // EOF: Abhi shop featuredProduct filter
   } // end if productFilters
 
   return selector;
@@ -211,17 +209,17 @@ function filterProducts(productFilters) {
  * featured products as well.
  */
 Meteor.startup(() => {
-  Meteor.default_server.publish_handlers["Products/grid"] = publishFeaturedSwagProducts;
+  Meteor.default_server.publish_handlers["Products/grid"] = publishFeaturedAbhiProducts;
 });
 
 
 /**
- * Swag shop products publication. Knows how to filter for featured products.
+ * Abhi shop products publication. Knows how to filter for featured products.
  * @param {Number} [productScrollLimit] - optional, defaults to 24
  * @param {Array} shops - array of shopId to retrieve product from.
  * @return {Object} return product cursor
  */
-function publishFeaturedSwagProducts(productScrollLimit = 24, productFilters, sort = {}) {
+function publishFeaturedAbhiProducts(productScrollLimit = 24, productFilters, sort = {}) {
   check(productScrollLimit, Number);
   check(productFilters, Match.OneOf(undefined, Object));
   check(sort, Match.OneOf(undefined, Object));

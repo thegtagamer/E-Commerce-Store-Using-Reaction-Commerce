@@ -32,9 +32,14 @@ html:not(.rtl) .rui.navbar .brand {
 }
 
 html .rui.navbar {
-  background-color: inherit;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  background-color: #fff;
+  margin-bottom: 0;
+  padding: 10px 0;
+  border: 0;
   height: 100%;
   letter-spacing: 0.6px;
+  
   .languages {
    /* @media screen and (max-width: 767px) {
       display: none;
@@ -61,16 +66,18 @@ html .rui.navbar {
   }
 
   .accounts {
-    height: 100%;
+    background: #222222;
     &:hover {
+      background-color: #ccc;
       border-color: inherit;
-      background-color: inherit;
+      //background-color: inherit;
     }
     .accounts-dropdown {
       height: initial;
     }
   }
   .dropdown-toggle {
+    color:#fff;
     font-size: 12px;
     font-weight: bold;
     padding: 0 25px 0 15px;
@@ -170,6 +177,7 @@ html .rui.navbar {
               padding: 30px 0 0 20px;
             }
             .dropdown-menu {
+              
               @media screen and (max-width: 767px) {
                 right: -222px;
               }
@@ -252,29 +260,48 @@ html .rui.navbar {
   }
 }
 
+
 .utility-bar {
-  background-color: #f7f5f6;
+  background-color: #252525;
   display: flex;
   height: 35px;
   justify-content: space-between;
   letter-spacing: 0.5px;
+  color:#d9d9d9;
 
   @media screen and (max-width: @screen-xs-max) {
     display: none;
   }
 }
 
-.utility-bar-hashtag {
+.utility-bar-social {
   font-size: 12px;
   font-weight: bold;
   padding: 10px 0 0 29px;
   text-transform: uppercase;
 }
 
-.utility-bar-news {
-  font-size: 12px;
-  font-weight: 600;
-  height: 16px;
-  padding-top: 9px;
-  text-align: center;
+
+.dropdown-menu{
+
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+
 }

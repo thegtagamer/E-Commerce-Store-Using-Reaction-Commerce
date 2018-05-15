@@ -2,7 +2,7 @@ import { Reaction } from "/server/api";
 
 Reaction.registerPackage({
   label: "Reaction Swag Shop",
-  name: "reaction-swag-shop",
+  name: "abhisheks-shop",
   icon: "fa fa-bars",
   autoEnable: true,
   settings: {

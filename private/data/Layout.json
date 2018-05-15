@@ -137,8 +137,8 @@
     "enabled" : true,
     "structure" : {
       "template" : "productDetailSimple",
-      "layoutHeader" : "SwagShopHeader",
-      "layoutFooter" : "SwagShopFooter",
+      "layoutHeader" : "AbhiShopHeader",
+      "layoutFooter" : "AbhiShopFooter",
       "notFound" : "productNotFound",
       "dashboardHeader" : "productDetailSimpleToolbar",
       "dashboardControls" : "productDetailDashboardControls",
@@ -172,8 +172,8 @@
     "enabled" : true,
     "structure" : {
       "template" : "products",
-      "layoutHeader" : "SwagShopHeader",
-      "layoutFooter" : "SwagShopFooter",
+      "layoutHeader" : "AbhiShopHeader",
+      "layoutFooter" : "AbhiShopFooter",
       "notFound" : "productNotFound",
       "dashboardHeader" : "gridPublishControls",
       "dashboardControls" : "productDetailDashboardControls",

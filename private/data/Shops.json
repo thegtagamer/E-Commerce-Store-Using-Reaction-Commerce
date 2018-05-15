@@ -3186,7 +3186,7 @@
 			}
 		}
 	},
-	"name": "Reaction Swag Shop",
+	"name": "Reaction abhi Shop",
 	"timezone": "US/Pacific",
 	"baseUOL": "in",
 	"unitsOfLength": [
@@ -3239,7 +3239,7 @@
 	],
 	"addressBook": [
 		{
-			"company": "Reaction Swag Shop",
+			"company": "Reaction abhi Shop",
 			"fullName": "Ongo Works",
 			"address1": "2110 Main Street",
 			"address2": "Suite 207",
@@ -3255,7 +3255,7 @@
 			"failedValidation": false
 		}
 	],
-	"slug": "reaction-swag-shop",
+	"slug": "abhisheks-shop",
 	"status": "active",
 	"domains": [
 		"localhost"

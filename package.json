@@ -1,5 +1,5 @@
 {
-  "name": "reaction-swag-shop",
+  "name": "abhisheks-shop",
   "version": "0.0.1",
   "description": "A Reaction Commerce plugin that creates swagshop.reactioncommerce.com",
   "main": "register.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reactioncommerce/reaction-swag-shop.git"
+    "url": "git+https://github.com/reactioncommerce/abhisheks-shop.git"
   },
   "keywords": [
     "reaction",
@@ -20,9 +20,9 @@
   "author": "Reaction Commerce",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/reactioncommerce/reaction-swag-shop/issues"
+    "url": "https://github.com/reactioncommerce/abhisheks-shop/issues"
   },
-  "homepage": "https://github.com/reactioncommerce/reaction-swag-shop#readme",
+  "homepage": "https://github.com/reactioncommerce/abhisheks-shop#readme",
   "dependencies": {
     "buffer-stream-reader": "^0.1.1"
   },

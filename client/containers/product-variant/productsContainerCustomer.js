@@ -23,9 +23,9 @@ function composer(props, onData) {
   const shopIdOrSlug = Reaction.Router.getParam("shopSlug");
 
   const tag = Tags.findOne({ slug }) || Tags.findOne(slug);
-  // BOF: swag shop featuredProduct filter
+  // BOF: abhi shop featuredProduct filter
   // const scrollLimit = Session.get("productScrollLimit");
-  // EOF: swag shop featuredProduct filter
+  // EOF: abhi shop featuredProduct filter
 
   let tags = {}; // this could be shop default implementation needed
   let shopIds = {};
@@ -56,20 +56,20 @@ function composer(props, onData) {
   };
 
   const queryParams = Object.assign({}, tags, Reaction.Router.current().query, shopIds);
-  // BOF: swag shop featuredProduct filter
-  let swagShopScrollLimit;
+  // BOF: abhi shop featuredProduct filter
+  let abhiShopScrollLimit;
   if (slug) {
     // e.g. route /tag/:slug?
-    swagShopScrollLimit = Session.get("productScrollLimit");
+    abhiShopScrollLimit = Session.get("productScrollLimit");
   } else {
     // e.g. index route /
     // Only interested in first 3 products for "Products we love" section
-    swagShopScrollLimit = 3;
+    abhiShopScrollLimit = 3;
     queryParams.featuredProductLabel = ""; // subscribe to all featured products, regardless of label
   }
 
-  const productsSubscription = Meteor.subscribe("Products/grid", swagShopScrollLimit, queryParams, sort);
-  // EOF: swag shop featuredProduct filter
+  const productsSubscription = Meteor.subscribe("Products/grid", abhiShopScrollLimit, queryParams, sort);
+  // EOF: abhi shop featuredProduct filter
 
   if (productsSubscription.ready()) {
     window.prerenderReady = true;
@@ -92,10 +92,10 @@ function composer(props, onData) {
 
   canLoadMoreProducts = productCursor.count() >= Session.get("productScrollLimit");
 
-  // BOF: swag shop tags for category tiles
+  // BOF: abhi shop tags for category tiles
   tags = Tags.find({ isTopLevel: true }, { sort: { position: 1 } }).fetch();
   tags = _.sortBy(tags, "position"); // puts tags without position at end of array
-  // EOF: swag shop tags for category tiles
+  // EOF: abhi shop tags for category tiles
 
   const products = productCursor.fetch();
   const productIds = products.map((p) => p._id);

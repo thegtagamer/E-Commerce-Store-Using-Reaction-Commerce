@@ -1,8 +1,8 @@
 [{
   "i18n": "de",
-  "ns": "reaction-swag-shop",
+  "ns": "abhisheks-shop",
   "translation": {
-    "reaction-swag-shop": {
+    "abhisheks-shop": {
       "myCart": "Warenkorb",
       "productsWeLove": "Unsere Lieblingsprodukte",
       "weHeardYouLikeSwag": "Wir hörten, Du magst Krimskrams.",

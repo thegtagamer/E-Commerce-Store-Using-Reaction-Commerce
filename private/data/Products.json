@@ -25,7 +25,7 @@
 	"description": "A bag of rich Arabica coffee. Great for a fueling up for a night out or for settling in for a night of coding at home",
 	"isBackorder": true,
 	"positions": {
-		"reaction swag shop": {
+		"reaction abhi shop": {
 			"weight": 1
 		}
 	},
@@ -146,7 +146,7 @@
 	"description": "A sturdy mug to keep your hot drinks hot and your cold drinks cold",
 	"isBackorder": true,
 	"positions": {
-		"reaction swag shop": {
+		"reaction abhi shop": {
 			"weight": 1
 		}
 	},

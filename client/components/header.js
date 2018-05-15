@@ -3,7 +3,7 @@ import { registerComponent, Components } from "@reactioncommerce/reaction-compon
 import UtilityBar from "./utilityBar";
 
 
-class SwagShopHeader extends React.Component {
+class AbhiShopHeader extends React.Component {
   render() {
     return (
       <div>
@@ -15,6 +15,6 @@ class SwagShopHeader extends React.Component {
 }
 
 
-registerComponent("SwagShopHeader", SwagShopHeader);
+registerComponent("AbhiShopHeader", AbhiShopHeader);
 
-export default SwagShopHeader;
+export default AbhiShopHeader;

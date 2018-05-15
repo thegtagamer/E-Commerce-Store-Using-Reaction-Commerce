@@ -28,7 +28,7 @@ class ProductGrid extends ProductGridCore {
       // Tag route
       const tag = this.props.tags.find((x) => x.slug === this.tagRouteSlug);
       return (
-        <div className="cat-hero" style={{ backgroundImage: `url('/plugins/reaction-swag-shop/${tag.catHeroImageUrl}')` }} >
+        <div className="cat-hero" style={{ backgroundImage: `url('/plugins/abhisheks-shop/${tag.catHeroImageUrl}')` }} >
           <div className="cat-hero-wrapper">
             <div className="cat-hero-slogan">
               <Components.Translation defaultValue={"Lorem ipsum"} i18nKey={tag.catHeroSloganI18nKey} />
@@ -44,15 +44,15 @@ class ProductGrid extends ProductGridCore {
       <div className="hero">
         <div className="hero-wrapper">
           <div className="hero-slogan">
-            <Components.Translation defaultValue={"We heard you like swag."} i18nKey={"weHeardYouLikeSwag"} />
+            <Components.Translation defaultValue={"Start Shopping today."} i18nKey={"startshoppingtoday"} />
           </div>
           <div className="hero-huge-text">
-            <Components.Translation defaultValue={"You’re in the right place."} i18nKey={"youAreInTheRightPlace"} />
+            <Components.Translation defaultValue={"Providing you the best outfitss."} i18nKey={"providingyouthebestoutfits"} />
           </div>
           <Components.Button
             className="hero__button"
-            label={"Shop swag"}
-            i18nKeyLabel={"shopSwag"}
+            label={"Check Products"}
+            i18nKeyLabel={"checkProducts"}
             bezelStyle={"solid"}
             primary={true}
             type="button"
@@ -69,7 +69,7 @@ class ProductGrid extends ProductGridCore {
       // Render image only for tag route
       if (this.tagRouteSlug) {
         const insertAt = (products.length && Math.ceil(products.length / 2)) || 0;
-        products.splice(insertAt, 0, { src: "/plugins/reaction-swag-shop/mountain-road.jpg" });
+        products.splice(insertAt, 0, { src: "/plugins/abhisheks-shop/mountain-road.jpg" });
       }
       const currentTag = ReactionProduct.getTag();
       return products.map((product, index) => {
@@ -106,7 +106,7 @@ class ProductGrid extends ProductGridCore {
     return (
       <div className={"cat-tile col-xs-12"} key={tag._id}>
         <a href={`/tag/${tag.slug}`}>
-          <img alt={tag.name} src={`/plugins/reaction-swag-shop/${tag.catTileImageUrl}`} />
+          <img alt={tag.name} src={`/plugins/abhisheks-shop/${tag.catTileImageUrl}`} />
           <span className={"category"}>{tag.name}</span>
         </a>
       </div>
@@ -129,21 +129,22 @@ class ProductGrid extends ProductGridCore {
     return chunks;
   }
 
-  shopAllLabel() {
-    return (
-      <span><Components.Translation defaultValue={"Shop all products"} i18nKey={"shopAllProducts"} />&nbsp;<i className="fa fa-long-arrow-right" /></span>
-    );
-  }
-
   renderCategories() {
     return (
+      <div>
+        <div className={"cat-header"}>
+        <h2><center>What we offer</center></h2>
+        </div>
       <div className={"categories row"}>
         <div className={"cat-tile col-xs-12 col-sm-push-4 col-sm-4"}>
           <div className={"pic-essentials"}>
             <div className={"btn-essentials"}>
               <Components.Button
                 className={"btn-blue"}
-                label={this.shopAllLabel()}
+                label={"Shop all products"}
+                i18nKeyLabel={"shopAllProducts"}
+                icon={"fa fa-long-arrow-right"}
+                iconAfter
                 bezelStyle={"solid"}
                 primary={false}
                 type="button"
@@ -153,6 +154,7 @@ class ProductGrid extends ProductGridCore {
           </div>
         </div>
         {this.renderCategoryChunks(this.props.tags)}
+      </div>
       </div>
     );
   }
@@ -187,37 +189,18 @@ class ProductGrid extends ProductGridCore {
     return (
       <div className={"word-of-the-day"}>
         <div className={"word-of-the-day-header"}>
-          <Components.Translation defaultValue={"#MADEINTHESUNSHINE"} i18nKey={"wordOfTheDayHeader"} />
+          <Components.Translation defaultValue={"#BUYGOOD"} i18nKey={"buyGood"} />
         </div>
-        <div className={"word-of-the-day-text"}>
-          <a href="https://www.instagram.com/reactioncommerce/" title="Instagram">
-            <Components.Translation defaultValue={"Shop your favorites on our Instagram feed."} i18nKey={"wordOfTheDayText"} />
-          </a>
-        </div>
+      
       </div>
     );
   }
 
-  renderImageGallery() {
+   renderImageGallery() {
     return (
-      <div className="row image-gallery">
-        <div className="col-xs-12 col-sm-5ths col-sm-push-2">
-          <a href={"https://www.instagram.com/reactioncommerce/"} alt={"instagram"}>
-            <img alt="Instagram" src={"/plugins/reaction-swag-shop/palms.png"} />
-          </a>
-        </div>
-        <div className="col-xs-6 col-sm-5ths col-sm-pull-1">
-          <img alt="Frames" src={"/plugins/reaction-swag-shop/frames.png"} />
-        </div>
-        <div className="col-xs-6 col-sm-5ths col-sm-pull-1">
-          <img alt="Box" src={"/plugins/reaction-swag-shop/box.png"} />
-        </div>
-        <div className="col-xs-6 col-sm-5ths">
-          <img alt="Sticker" src={"/plugins/reaction-swag-shop/sticker.png"} />
-        </div>
-        <div className="col-xs-6 col-sm-5ths">
-          <img alt="T-Shirt" src={"/plugins/reaction-swag-shop/t-shirt.png"} />
-        </div>
+      
+  <div className="row image-gallery">
+         
       </div>
     );
   }

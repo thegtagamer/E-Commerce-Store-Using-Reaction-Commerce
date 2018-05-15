@@ -1,8 +1,8 @@
 [{
   "i18n": "en",
-  "ns": "reaction-swag-shop",
+  "ns": "abhisheks-shop",
   "translation": {
-    "reaction-swag-shop": {
+    "abhisheks-shop": {
       "myCart": "My cart",
       "productsWeLove": "Products We Love",
       "weHeardYouLikeSwag": "We heard you like swag.",

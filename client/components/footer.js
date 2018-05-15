@@ -3,7 +3,7 @@ import { Meteor } from "meteor/meteor";
 import SimpleSchema from "simpl-schema";
 import Alert from "sweetalert2";
 import { i18next } from "/client/api";
-import { Validation } from "@reactioncommerce/reaction-collections";
+import { Validation } from "@reactioncommerce/schemas";
 import { registerComponent, Components } from "@reactioncommerce/reaction-components";
 import { Card, CardHeader, CardBody } from "/imports/plugins/core/ui/client/components";
 
@@ -16,7 +16,7 @@ const EmailFormSchema = new SimpleSchema({
   }
 });
 
-class SwagShopFooter extends React.Component {
+class AbhiShopFooter extends React.Component {
   constructor(...args) {
     super(...args);
     this.validation = new Validation(EmailFormSchema);
@@ -52,7 +52,7 @@ class SwagShopFooter extends React.Component {
     });
 
     if (validationStatus.isValid && event.currentTarget.value) {
-      Meteor.call("reaction-swag-shop/requestApproachFromStaff", event.currentTarget.value, (error) => {
+      Meteor.call("abhisheks-shop/requestApproachFromStaff", event.currentTarget.value, (error) => {
         if (!error) {
           Alert({
             title: i18next.t("app.success"),
@@ -100,9 +100,9 @@ class SwagShopFooter extends React.Component {
     return (
       <div className="col-xs-12 col-sm-4 col-lg-6 get-in-contact">
         <div className="email-form">
-          <div className="email-form-header">Built on Reaction Commerce</div>
-          <div className="email-form-subheader">Feeling inspired?</div>
-          <Components.Translation defaultValue="See what you can do with our open source platform." i18nKey="seeWhatYouCanDo"/>
+        
+          <div className="email-form-header">Subscribe now!</div>
+          <Components.Translation defaultValue="Getthelatestupdates." i18nKey="seeWhatYouCanDo"/>
           <div className="email-form-field">
             <Components.TextField
               i18nKeyPlaceholder="emailAddress"
@@ -242,7 +242,7 @@ class SwagShopFooter extends React.Component {
   renderBottomLine() {
     return (
       <div className="bottomline row">
-        &copy;{"2017 REACTION COMMERCE, INC. Privacy & Terms"}
+        &copy;{"2018 Built by Abhishek using Reaction Commerce. Privacy & Terms"}
       </div>
     );
   }
@@ -262,6 +262,6 @@ class SwagShopFooter extends React.Component {
   }
 }
 
-registerComponent("SwagShopFooter", SwagShopFooter);
+registerComponent("AbhiShopFooter", AbhiShopFooter);
 
-export default SwagShopFooter;
+export default AbhiShopFooter;
